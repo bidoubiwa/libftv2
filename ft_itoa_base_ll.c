@@ -1,7 +1,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-static int	ft_pow(unsigned int v, int base)
+static int	ft_pow(unsigned long long v, unsigned int base)
 {
 	if (v == 0)
 		return (1);
@@ -9,15 +9,15 @@ static int	ft_pow(unsigned int v, int base)
 		return (1 + ft_pow(v / base, base));
 }
 
-char		*ft_itoa_base(unsigned int value, unsigned int base)
+char	*ft_itoa_base_ll(unsigned long long value, unsigned int base)
 {
-	char			*res;
-	unsigned int	p;
-	unsigned int	i;
+	char				*res;
+	unsigned long long	p;
+	unsigned int		i;
 
 	i = ft_pow(value, base);
 	p = value;
-	if (!(res = malloc(sizeof(char) * i)) || base < 2 || base > 16)
+	if (!(res = malloc(sizeof(char) * i)))
 		return (NULL);
 	res[i--] = '\0';
 	while (i--)

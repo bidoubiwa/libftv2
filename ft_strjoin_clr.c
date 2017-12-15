@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin_clr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cvermand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 16:47:25 by cvermand          #+#    #+#             */
-/*   Updated: 2017/11/09 23:54:13 by cvermand         ###   ########.fr       */
+/*   Created: 2017/11/12 16:43:29 by cvermand          #+#    #+#             */
+/*   Updated: 2017/11/15 14:54:19 by cvermand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+char	*ft_strjoin_clr(char *s1, char *s2)
 {
-	char	*tmp;
+	unsigned int	i;
+	unsigned int	y;
+	char			*new;
+	char			*cnew;
 
-	tmp = dst;
-	while (*src)
-	{
-		*tmp++ = *src++;
-	}
-	*tmp = '\0';
-	return (dst);
+	i = 0;
+	y = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	if (!(new = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
+		return (NULL);
+	cnew = new;
+	while (s1[i])
+		*new++ = s1[i++];
+	while (s2[y])
+		*new++ = s2[y++];
+	*new = '\0';
+	free(s1);
+	free(s2);
+	return (cnew);
 }

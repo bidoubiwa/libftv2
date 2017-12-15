@@ -26,7 +26,8 @@ SRC = ft_putchar.c ft_putstr.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
 	  ft_putstr_fd.c ft_putendl_fd.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c \
 	  ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_strdel.c ft_lstaddafter.c \
 	  ft_lstswap.c ft_listmerge.c ft_lstlast.c ft_lstsize.c ft_itoa_ll.c \
-	  ft_match.c
+	  ft_match.c ft_itoa_base.c ft_itoa_base_ll.c ft_strjoin_clr.c \
+	  ft_atoi_base.c
 
 BIN = ft_putchar.o ft_putstr.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o \
 	  ft_strlen.o ft_strdup.o ft_tolower.o ft_toupper.o ft_isprint.o \
@@ -40,7 +41,8 @@ BIN = ft_putchar.o ft_putstr.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o \
 	  ft_putstr_fd.o ft_putendl_fd.o ft_lstnew.o ft_lstdelone.o ft_lstdel.o \
 	  ft_lstadd.o ft_lstiter.o ft_lstmap.o ft_strdel.o ft_lstaddafter.o \
 	  ft_lstswap.o ft_listmerge.o ft_lstlast.o ft_lstsize.o ft_itoa_ll.o \
-	  ft_match.o
+	  ft_match.o ft_itoa_base.o ft_itoa_base_ll.o ft_strjoin_clr.o \
+	  ft_atoi_base.o
 
 
 all : $(NAME)
